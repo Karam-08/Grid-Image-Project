@@ -10,11 +10,11 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: [row1-start] 100px [row1-end] 100px [last-line] 100px 100px 100px;
-            /*grid-template-areas: "header header header ."
+            grid-template-areas: "header header header ."
                                 "main main navbar navbar"
                                 "main main article sidebar"
                                 "aside . . sidebar"
-                                ". footer footer footer"; */
+                                ". footer footer footer";
             gap: 10px;
         }
         .box{
@@ -42,8 +42,18 @@
             grid-area: article;
 
         }
-        .item-5{grid-area: sidebar;}
-        .item-6{grid-area: aside;}
+        .item-5
+        {
+            grid-area: sidebar;
+        
+        }
+
+        .item-6
+        {
+            grid-area: aside;
+        
+        }
+
         .item-7{
             grid-area: footer;
             grid-column: 1/7;
@@ -54,7 +64,7 @@
 <body>
     <div class="container">
         <div class="box item-1">Header</div>
-        <div class="box item-2"></div>
+        <div class="box item-2">Main</div>
         <div class="box item-3">Navbar</div>
         <div class="box item-4">Article</div>
         <div class="box item-5">Sidebar</div>

@@ -4,17 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grid Project</title>
-  <link rel="stylesheet" href="./CSS/grid.css">
-  <link rel="stylesheet" href="./CSS/navbar.css">
+<style>
+
+  .navbar{
+    background-color:rgb(208, 165, 165);
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.images{
+    display: grid;
+    gap: 10px;
+    border: 5px solid grey;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 40px 100px 100px 100px 100px 400px 220px 150px 100px 100px;
+    grid-template-areas: "navbar navbar navbar navbar navbar"
+                        "costume-expressions costume-expressions costume-expressions costume-expressions facebook"
+                        "costume-expressions costume-expressions costume-expressions costume-expressions twitter"
+                        "costume-expressions costume-expressions costume-expressions costume-expressions anon-masks"
+                        "costume-expressions costume-expressions costume-expressions costume-expressions anon-masks"
+                        "happy-family happy-family serious-about-makeup costumes-for-all pink-hair-girl"
+                        "oppenheimer super-sale super-sale candy-man surprised-person"
+                        "props santa halloween halloween-2 witches-ghosts-and-goblins"
+                        "mask color-mask-with-stars color-mask-with-stars"
+}
+
+p{
+    display:inline;
+}
+
+a[href="#"]{
+    text-decoration: none;
+    color: grey;
+}
+
+
+
+
+.item-1{grid-area:costume-expressions;}
+.item-2{grid-area:facebook;}
+.item-3{grid-area:twitter;}
+.item-4{grid-area:anon-masks;}
+.item-5{grid-area:happy-family;}
+.item-6{grid-area:serious-about-makeup;}
+.item-7{grid-area:costumes-for-all;}
+.item-8{grid-area:pink-hair-girl;}
+.item-9{grid-area:oppenheimer;}
+.item-10{grid-area:super-sale;}
+.item-11{grid-area:candy-man;}
+.item-12{grid-area:surprised-person;}
+.item-13{grid-area:props;}
+.item-14{grid-area:santa;}
+.item-15{grid-area:woman;}
+.item-16{grid-area:free-shipping;}
+.item-17{grid-area:halloween;}
+.item-18{grid-area:halloween-2;}
+.item-19{grid-area:witches-ghosts-goblins;}
+.item-20{grid-area:mask;}
+.item-21{grid-area:color-mask-with-stars;}
+</style>
+
+
 </head>
 <body>
-  <div class="container">
+
+  <div class="images">
     <div class="navbar">
       <p><a href="#">Enter Site</a></p>
       <p><a href="#">My Account</a></p>
       <p><a href="#">Track Orders</a></p>
       <p><a href="#">Contact Info</a></p>
     </div>
-  
+    
+    </div>
+
+
 </body>
 </html>
