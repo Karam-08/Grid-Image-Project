@@ -4,80 +4,257 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grid Project</title>
-<style>
+  <!-- Basic ! command -->
+<style> 
+
+
+  .border{
+    border: 5px solid grey; 
+    /* Sets the grey border around the whole website */
+  }
 
   .navbar{
     background-color:rgb(208, 165, 165);
+    /* Sets the background color for the navigation bar */
     padding: 10px;
     padding-left: 30px;
+    /* Adjusts where the text goes */
 }
 
-.images{
+.image-layout{
     display: grid;
+    /* Sets up the grid to put images in */
     gap: 10px;
-    border: 5px solid grey;
+    /* Puts space between images */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 40px 100px 100px 100px 100px 400px 220px 150px 100px 100px;
-    grid-template-areas: "navbar navbar navbar navbar navbar"
-                        "costume-expressions costume-expressions costume-expressions costume-expressions facebook"
-                        "costume-expressions costume-expressions costume-expressions costume-expressions twitter"
-                        "costume-expressions costume-expressions costume-expressions costume-expressions anon-masks"
-                        "costume-expressions costume-expressions costume-expressions costume-expressions anon-masks"
-                        "happy-family happy-family serious-about-makeup costumes-for-all pink-hair-girl"
-                        "oppenheimer super-sale super-sale candy-man surprised-person"
-                        "props santa halloween halloween-2 witches-ghosts-and-goblins"
-                        "mask color-mask-with-stars color-mask-with-stars"
+    grid-template-rows: repeat(9, auto);
+    /* Sets up where the images can be placed */
+
 }
 
 p{
     display:inline;
+    /* Puts text in one straight line in the navbar */
 }
 
 a[href="#"]{
     text-decoration: none;
     color: grey;
+    /* Decoration for navbar text links */
 }
 
 
 
 
-.item-1{grid-area:costume-expressions;}
-.item-2{grid-area:facebook;}
-.item-3{grid-area:twitter;}
-.item-4{grid-area:anon-masks;}
-.item-5{grid-area:happy-family;}
-.item-6{grid-area:serious-about-makeup;}
-.item-7{grid-area:costumes-for-all;}
-.item-8{grid-area:pink-hair-girl;}
-.item-9{grid-area:oppenheimer;}
-.item-10{grid-area:super-sale;}
-.item-11{grid-area:candy-man;}
-.item-12{grid-area:surprised-person;}
-.item-13{grid-area:props;}
-.item-14{grid-area:santa;}
-.item-15{grid-area:woman;}
-.item-16{grid-area:free-shipping;}
-.item-17{grid-area:halloween;}
-.item-18{grid-area:halloween-2;}
-.item-19{grid-area:witches-ghosts-goblins;}
-.item-20{grid-area:mask;}
-.item-21{grid-area:color-mask-with-stars;}
+.item-1
+/* Name that lets div do its work */
+{
+  grid-area:costume-expressions;
+  grid-column: 1/5;
+  grid-row: 1/4;
+  /* Specifies where image goes */
+  /* Everything from item 1 to 21 is an image */
+}
+.item-2{
+  grid-area:facebook;
+  grid-column: 5/5;
+  grid-row: 1/1;
+}
+.item-3{
+  grid-area:twitter;
+  grid-column: 5/5;
+  grid-row: 2/2;
+}
+.item-4{
+  grid-area:anon-masks;
+  grid-column:5/5;
+  grid-row:3/4;
+}
+.item-5{
+  grid-area:happy-family;
+  grid-column: 1/3;
+  grid-row: 4/6;
+}
+.item-6{
+  grid-area:serious-about-makeup;
+  grid-column:3/4;
+  grid-row:4/6;
+}
+.item-7{
+  grid-area:costumes-for-all;
+  grid-column:4/5;
+  grid-row:4/6;
+}
+.item-8{
+  grid-area:pink-hair-girl;
+  grid-column:5/5;
+  grid-row:4/6;
+}
+.item-9{
+  grid-area:oppenheimer;
+  grid-column:1/2;
+  grid-row:6/8;
+}
+
+.item-10{
+  grid-area:super-sale;
+  grid-column:2/4;
+  grid-row:6/7;
+}
+.item-11{
+  grid-area:candy;
+  grid-column:4/5;
+  grid-row:6/7;
+}
+.item-12{
+  grid-area:surprised-person;
+  grid-column:5/5;
+  grid-row:6/7;
+}
+.item-13{
+  grid-area:props;
+  grid-column:1/2;
+  grid-row:8/8;
+}
+.item-14{
+  grid-area:santa;
+  grid-column:2/2;
+  grid-row:7/9;
+}
+.item-15{
+  grid-area:woman;
+  grid-column:3/5;
+  grid-row:7/7;
+}
+.item-16{
+  grid-area:free-shipping;
+  grid-column:5/5;
+  grid-row:7/7;
+}
+.item-17{
+  grid-area:halloween;
+  grid-column:3/3;
+  grid-row:8/8;
+}
+.item-18{
+  grid-area:halloween-2;
+  grid-column:4/4;
+  grid-row:8/8;
+}
+.item-19{
+  grid-area:witches-ghosts-goblins;
+  grid-column: 5/5;
+  grid-row:8/8;
+}
+.item-20{
+  grid-area:mask;
+  grid-column:1/2;
+  grid-row:9/9;
+}
+.item-21{
+  grid-area:color-mask-with-stars;
+    grid-column:2/4;
+    grid-row:9/9;
+  }
+.description{
+  grid-area:description;
+  margin-left: 100px;
+  margin-top: 100px;
+  /* Adjusts where description goes */
+  color:crimson;
+  /* Changes color of text */
+  grid-column: 5/5;
+  grid-row: 9/9
+  /* More adjustments */
+}
 </style>
 
 
 </head>
 <body>
 
-  <div class="images">
-    <div class="navbar">
-      <p><a href="#">Enter Site</a></p>
-      <p><a href="#">My Account</a></p>
-      <p><a href="#">Track Orders</a></p>
-      <p><a href="#">Contact Info</a></p>
+<div class="border">
+  <!-- Border is above everything so that the whole website has a border around it -->
+  <div class="navbar">
+    <p><a href="#">Enter Site</a></p>
+    <p><a href="#">My Account</a></p>
+    <p><a href="#">Track Orders</a></p>
+    <p><a href="#">Contact Info</a></p>
+    <!-- # is just filler -->
+  </div>
+  <div class="image-layout">
+    <div class="item-1">
+      <!-- div interacts with the CSS to put the image where it needs to be -->
+      <img src="./Images/ce_logo.png" width="100%" height="100%" alt="costume-expressions">
+      <!-- Puts the actual image onto the site -->
     </div>
-    
+     <div class="item-2"> 
+      <img src="./Images/ce_image01.png" width="100%" height="100%" alt="facebook">
     </div>
-
+    <div class="item-3">
+      <img src="./Images/ce_image02.png" width="100%" height="100%" alt="twitter">
+     </div>
+    <div class="item-4">
+      <img src="./Images/ce_image03.png" width="100%" height="100%" alt="anon-masks">
+    </div>
+    <div class="item-5">
+      <img src="./Images/ce_image04.png" width="100%" height="100%" alt="happy-family">
+    </div>
+    <div class="item-6">
+      <img src="./Images/ce_image05.png" width="100%" height="100%" alt="serious-about-makeup">
+    </div>
+    <div class="item-7">
+      <img src="./Images/ce_image06.png" width="100%" height="100%" alt="costumes-for-all">
+    </div>
+    <div class="item-8">
+      <img src="./Images/ce_image07.png" width="100%" height="100%" alt="pink-hair-girl">
+    </div>
+    <div class="item-9">
+      <img src="./Images/ce_image08.png" width="100%" height="100%" alt="oppenheimer">
+    </div>
+    <div class="item-10">
+      <img src="./Images/ce_image09.png" width="100%" height="100%" alt="super-sale">
+    </div>
+    <div class="item-11">
+      <img src="./Images/ce_image10.png" width="100%" height="100%" alt="candy">
+    </div>
+    <div class="item-12">
+      <img src="./Images/ce_image11.png" width="100%" height="100%" alt="props">
+    </div>
+    <div class="item-13">
+      <img src="./Images/ce_image12.png" width="100%" height="100%" alt="surprised-person">
+    </div>
+    <div class="item-14">
+      <img src="./Images/ce_image13.png" width="100%" height="100%" alt="santa">
+    </div>
+    <div class="item-15">
+      <img src="./Images/ce_image14.png" width="100%" height="100%" alt="woman">
+    </div>
+     <div class="item-16"> 
+      <img src="./Images/ce_image15.png" width="100%" height="100%" alt="free-shipping">
+    </div>
+    <div class="item-17">
+      <img src="./Images/ce_image16.png" width="100%" height="100%" alt="halloween">
+    </div>
+    <div class="item-18">
+      <img src="./Images/ce_image17.png" width="100%" height="100%" alt="halloween-2">
+    </div>
+    <div class="item-19">
+      <img src="./Images/ce_image18.png" width="100%" height="100%" alt="witches-ghosts-goblins">
+    </div>
+    <div class="item-20">
+      <img src="./Images/ce_image19.png" width="100%" height="100%" alt="mask">
+    </div>
+    <div class="item-21">
+      <img src="./Images/ce_image20.png" width="100%" height="100%" alt="color-mask-with-stars">
+    </div>
+    <div class="description">
+      <p>Costume Expressions</p>
+      <p>3411 Torrence Dr.</p>
+      <p>Rockville, MD 20850</p>
+    </div>
+    </div>
+</div>
 
 </body>
 </html>
